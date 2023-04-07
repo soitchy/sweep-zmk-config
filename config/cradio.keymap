@@ -33,6 +33,14 @@
         release-after-ms = <1000>;
         quick-release;
       };
+
+      qmarkexcl: qmark_excl {
+        compatible = "zmk,behavior-mod-morph";
+        label = "QUESTIONMARK_EXCLAMATION;
+        #binding-cells = <0>;
+        bindings = <&kp QMARK>, <&kp EXCL>;
+        mods = <(MOD_LSFT)>;
+      };
     };
 
     conditional_layers {
@@ -54,8 +62,8 @@
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
              &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ TAB      │ BACKSPC  │ ENTER    │
-            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp TAB    &kp BSPC    &kp ENTER
+        //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ ,  <     │ .  >     │ ? !      │
+            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &kp COMMA   &kp DOT    &qmarkexcl
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &kp SPACE &skq LSHFT      &skq LCTRL  &tog SYMBOLS
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -65,14 +73,14 @@
         symbols {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ ^        │  &       │  ' "     │  [       │    \     │   │ $        │ ]        │ *        │ -  _     │  :       │
-            &kp CARET   &kp AMPS   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp STAR  &kp MINUS    &kp COLON
+        //│ ESC      │  &       │  ' "     │  [       │    \     │   │ $        │ ]        │ *        │ -  _     │  ^       │
+            &kp ESC   &kp AMPS   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp STAR  &kp MINUS    &kp CARET
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ ?        │  !       │   {      │  }       │   / ?    │   │    \     │ (        │ )        │ =   +    │  ;  :    │
-            &kp QMARK   &kp EXCL    &kp LBRC  &kp RBRC  &kp FSLH       &kp BSLH   &kp LPAR   &kp RPAR  &kp EQUAL   &kp SEMI
+        //│ BACKSPACE│    TAB   │   {      │  }       │   / ?    │   │    \     │ (        │ )        │ =   +    │  ENTER   │
+            &kp BSPC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH       &kp BSLH   &kp LPAR   &kp RPAR  &kp EQUAL   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ #        │  7       │  |       │  , <     │    ` ~   │   │ @        │ .  >     │          │  BACKSPC │          │
-           &kp POUND   &kp PRCNT   &kp PIPE   &kp COMMA &kp GRAVE      &kp AT     &kp DOT     &trans    &kp BSPC     &trans
+        //│ #        │  %       │  |       │  , <     │    ` ~   │   │ @        │ .  >     │  ;  :    │  BACKSPC │          │
+           &kp POUND   &kp PRCNT   &kp PIPE   &kp COMMA &kp GRAVE      &kp AT     &kp DOT     &kp SEMI    &kp BSPC     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &to DEFAULT &skq LSHFT       &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
