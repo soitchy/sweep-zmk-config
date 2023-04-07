@@ -69,10 +69,10 @@
             &kp CARET   &kp AMPS   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp STAR  &kp MINUS    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ?        │  !       │   {      │  }       │   / ?    │   │    \     │ (        │ )        │ =   +    │  ;  :    │
-            &kp QMARK   &kp EXCL    &kp LBRC  &kp RBRC  &kp FSLH       &kp BSLH &kp LPAR   &kp RPAR  &kp EQUAL   &kp SEMI
+            &kp QMARK   &kp EXCL    &kp LBRC  &kp RBRC  &kp FSLH       &kp BSLH   &kp LPAR   &kp RPAR  &kp EQUAL   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ #        │  7       │  |       │  , <     │    ` ~   │   │ @        │ .  >     │          │  BACKSPC │          │
-           &POUND      &kp PRCNT   &kp PIPE   &kp COMMA &kp GRAVE      &kp AT     &kp DOT     &trans    &kp BSPC     &trans
+           &kp POUND   &kp PRCNT   &kp PIPE   &kp COMMA &kp GRAVE      &kp AT     &kp DOT     &trans    &kp BSPC     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &to DEFAULT &skq LSHFT       &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
