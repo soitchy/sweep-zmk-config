@@ -11,6 +11,7 @@
 
 #define DEFAULT 0
 #define SYMBOLS 1
+#define NUMBERS 2
 
 / {
     behaviors {
@@ -56,8 +57,8 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │ BACKSPACE│
-            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp BSPC
+        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │          │
+            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
              &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O
@@ -65,7 +66,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ ,  <     │ .  >     │ ? !      │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &kp COMMA   &kp DOT    &qmarkexcl
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp BSPC &to SYMBOLS     &skq LSHFT  &kp SPACE
+                                         &ht LCTRL BSPC &skq LSHFT   &to SYMBOLS &kp SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -73,21 +74,21 @@
         symbols {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ ESC      │  &       │  ' "     │  [       │    \     │   │ $        │ ]        │ *        │ -  _     │  ^       │
-            &kp ESC   &kp AMPS   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp STAR  &kp MINUS    &kp CARET
+        //│          │  &       │  ' "     │  [       │    \     │   │ $        │ ]        │ *        │ -  _     │  ^       │
+            &none   &kp AMPS   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp STAR  &kp MINUS    &kp CARET
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ BACKSPACE│    TAB   │   {      │  }       │   / ?    │   │    \     │ (        │ )        │ =   +    │  ENTER   │
-            &kp BSPC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH       &kp BSLH   &kp LPAR   &kp RPAR  &kp EQUAL   &kp ENTER
+        //│    ESC   │    TAB   │   {      │  }       │   / ?    │   │    \     │ (        │ )        │ =   +    │  ENTER   │
+            &kp ESC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH       &kp BSLH   &kp LPAR   &kp RPAR  &kp EQUAL   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ #        │  %       │  |       │  , <     │    ` ~   │   │ @        │ .  >     │  ;  :    │  BACKSPC │          │
-           &kp POUND   &kp PRCNT   &kp PIPE   &kp COMMA &kp GRAVE      &kp AT     &kp DOT     &kp SEMI    &kp BSPC     &trans
+        //│ #        │  %       │  |       │    <     │    ` ~   │   │ @        │    >     │  ;  :    │    :     │          │
+           &kp POUND   &kp PRCNT   &kp PIPE   &kp LT    &kp GRAVE      &kp AT     &kp GT     &kp SEMI    &kp COLON  &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &skq LSHFT    &none         &trans   &to DEFAULT
+                                              &trans   &to DEFAULT    &to NUMBERS &kp LALT   
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
-        right_layer {
+        numbers {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
@@ -99,41 +100,7 @@
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-
-        left_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │  ^       │          │          │          │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-
-        tri_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &to DEFAULT        &trans  &kp LALT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
