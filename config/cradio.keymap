@@ -36,7 +36,7 @@
 
       qmarkexcl: qmark_excl {
         compatible = "zmk,behavior-mod-morph";
-        label = "QUESTIONMARK_EXCLAMATION;
+        label = "QUESTIONMARK_EXCLAMATION";
         #binding-cells = <0>;
         bindings = <&kp QMARK>, <&kp EXCL>;
         mods = <(MOD_LSFT)>;
