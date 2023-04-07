@@ -74,14 +74,14 @@
         symbols {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  &       │  ' "     │  [       │    \     │   │ $        │ ]        │ *        │ -  _     │  ^       │
-            &none   &kp AMPS   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp STAR  &kp MINUS    &kp CARET
+        //│     %    │  "       │  '       │  [       │    \     │   │ $        │ ]        │ +        │    -     │  ^   _   │
+            &kp PRCNT   &kp DQT   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp PLUS  &kp MINUS  &ht CARET UNDER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    ESC   │    TAB   │   {      │  }       │   / ?    │   │    \     │ (        │ )        │ =   +    │  ENTER   │
-            &kp ESC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH       &kp BSLH   &kp LPAR   &kp RPAR  &kp EQUAL   &kp ENTER
+        //│    ESC   │    TAB   │   {      │  }       │   /      │   │    *     │ (        │ )        │    =     │  ENTER   │
+            &kp ESC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH       &kp STAR    &kp LPAR   &kp RPAR  &kp EQUAL   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ #        │  %       │  |       │    <     │    ` ~   │   │ @        │    >     │  ;  :    │    :     │          │
-           &kp POUND   &kp PRCNT   &kp PIPE   &kp LT    &kp GRAVE      &kp AT     &kp GT     &kp SEMI    &kp COLON  &trans
+        //│ #        │  &       │  |       │    <     │    ` ~   │   │ @        │    >     │  ;       │    :     │          │
+           &kp POUND   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT     &kp GT   &kp SEMI   &kp COLON  &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &trans   &to DEFAULT    &to NUMBERS &kp LALT   
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
