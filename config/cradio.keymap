@@ -56,8 +56,8 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  ESC     │
-            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp ESC
+        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │ BACKSPACE│
+            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
              &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O
@@ -65,7 +65,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ ,  <     │ .  >     │ ? !      │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &kp COMMA   &kp DOT    &qmarkexcl
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp SPACE &skq LSHFT      &skq LCTRL  &tog SYMBOLS
+                                            &skq LSHFT &to SYMBOLS     &skq LCTRL  &kp SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -82,7 +82,7 @@
         //│ #        │  %       │  |       │  , <     │    ` ~   │   │ @        │ .  >     │  ;  :    │  BACKSPC │          │
            &kp POUND   &kp PRCNT   &kp PIPE   &kp COMMA &kp GRAVE      &kp AT     &kp DOT     &kp SEMI    &kp BSPC     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &to DEFAULT &skq LSHFT       &trans     &trans
+                                            &skq LSHFT    &none         &trans   &to DEFAULT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
