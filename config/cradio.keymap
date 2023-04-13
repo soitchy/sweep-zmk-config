@@ -66,7 +66,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ ,  <     │ .  >     │ ? !      │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &kp COMMA   &kp DOT    &qmarkexcl
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                         &ht LCTRL BSPC &skq LSHFT   &to SYMBOLS &kp SPACE
+                                         &ht LCTRL BSPC &skq LSHFT   &mo SYMBOLS &kp SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -83,7 +83,7 @@
         //│ #        │  &       │  |       │    <     │    ` ~   │   │ @        │    >     │  ;       │    :     │          │
            &kp POUND   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT     &kp GT   &kp SEMI   &kp COLON  &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &trans   &to DEFAULT    &to NUMBERS &kp LALT   
+                                              &trans   &mo NUMBERS      &none     &kp LALT   
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -100,7 +100,7 @@
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &to DEFAULT        &trans  &kp LALT
+                                             &trans     &none          &none     &kp LALT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
