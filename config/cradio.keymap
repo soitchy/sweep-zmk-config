@@ -81,7 +81,7 @@
             &kp ESC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH       &kp STAR    &kp LPAR   &kp RPAR  &kp SEMI   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ SHIFT    │  &       │  |       │    <     │    ` ~   │   │ @        │    >     │  =       │    :     │          │
-           &kp LSHFT   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT     &kp GT   &kp EQUAL   &kp COLON  &DEL
+           &kp LSHFT   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT     &kp GT   &kp EQUAL   &kp COLON  &kp DEL
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &trans   &mo NUMBERS      &none     &kp LALT   
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
