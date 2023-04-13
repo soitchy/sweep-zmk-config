@@ -74,14 +74,14 @@
         symbols {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│     %    │  "       │  '       │  [       │    \     │   │ $        │ ]        │ +        │    -     │  ^   _   │
-       &ht POUND PRCNT &kp DQT   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp PLUS  &kp MINUS  &ht CARET UNDER
+        //│     %    │  "       │  '       │  [       │    \     │   │ $        │ ]        │ +        │    -     │          │
+       &ht POUND PRCNT &kp DQT   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp PLUS  &kp MINUS     &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    ESC   │    TAB   │   {      │  }       │   /      │   │    *     │ (        │ )        │    ;     │  ENTER   │
             &kp ESC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH       &kp STAR    &kp LPAR   &kp RPAR  &kp SEMI   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ SHIFT    │  &       │  |       │    <     │    ` ~   │   │ @        │    >     │  =       │    :     │          │
-           &kp LSHFT   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT     &kp GT   &kp EQUAL   &kp COLON  &kp DEL
+        //│ SHIFT    │  &       │  |       │    <     │    ` ~   │   │ @        │    >     │  =       │    :     │   ^   _  │
+           &kp LSHFT   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT     &kp GT   &kp EQUAL   &kp COLON  &ht CARET UNDER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &trans   &mo NUMBERS      &none     &kp LALT   
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -91,11 +91,11 @@
         numbers {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  1       │  2       │  3       │          │   │          │ HOME     │ PAGE DN  │ PAGE UP  │ END      │
-            &none    &kp N1     &kp N2     &kp N3     &none                &none  &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    
+        //│          │  1       │  2       │  3       │          │   │          │          │          │          │
+            &none    &kp N1     &kp N2     &kp N3       &none            &none    &none      &none      &none       &none  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  4       │  5       │  6       │          │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            &none    &kp N4     &kp N5     &kp N6     &none            &none      &kp LARW   &kp DARW   &kp UARW   &kp RARW   
+        //│          │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │
+            &kp BSPC    &kp N4     &kp N5     &kp N6     &none           &kp LARW   &kp DARW   &kp UARW   &kp RARW  &kp DEL 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ SHIFT    │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &kp LSHFT  &kp N7     &kp N8     &kp N9     &kp N0         &none      &kp F10     &kp F11      &kp F12      &none
