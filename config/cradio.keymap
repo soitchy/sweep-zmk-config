@@ -58,7 +58,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │          │
-            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &none
+            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp LGUI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
              &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O
@@ -75,13 +75,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│     %    │  "       │  '       │  [       │    \     │   │ $        │ ]        │ +        │    -     │  ^   _   │
-            &kp PRCNT   &kp DQT   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp PLUS  &kp MINUS  &ht CARET UNDER
+       &ht POUND PRCNT &kp DQT   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp PLUS  &kp MINUS  &ht CARET UNDER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    ESC   │    TAB   │   {      │  }       │   /      │   │    *     │ (        │ )        │    =     │  ENTER   │
-            &kp ESC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH       &kp STAR    &kp LPAR   &kp RPAR  &kp EQUAL   &kp ENTER
+        //│    ESC   │    TAB   │   {      │  }       │   /      │   │    *     │ (        │ )        │    ;     │  ENTER   │
+            &kp ESC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH       &kp STAR    &kp LPAR   &kp RPAR  &kp SEMI   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ #        │  &       │  |       │    <     │    ` ~   │   │ @        │    >     │  ;       │    :     │          │
-           &kp POUND   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT     &kp GT   &kp SEMI   &kp COLON  &trans
+        //│ SHIFT    │  &       │  |       │    <     │    ` ~   │   │ @        │    >     │  =       │    :     │          │
+           &kp LSHFT   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT     &kp GT   &kp EQUAL   &kp COLON  &DEL
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &trans   &mo NUMBERS      &none     &kp LALT   
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -91,14 +91,14 @@
         numbers {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│          │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │          │
+            &kp none    &kp N1     &kp N2     &kp N3     &none         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //│          │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │          │
+            &kp none    &kp N4     &kp N5     &kp N6     &none         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //│ SHIFT    │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
+           &kp LSHFT  &kp N7     &kp N8     &kp N9     &kp N0         &none      &kp F10     &kp F11      &kp F12      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &none          &none     &kp LALT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
