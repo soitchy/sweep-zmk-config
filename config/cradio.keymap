@@ -74,14 +74,14 @@
         symbols {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│     %    │  "       │  '       │  [       │    \     │   │ $        │ ]        │ +        │    -     │          │
-       &ht POUND PRCNT &kp DQT   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp PLUS  &kp MINUS     &kp DEL
+        //│     %    │  "       │  '       │  [       │    \     │   │ $        │ ]        │ +        │    -     │   ^   _  │
+       &ht POUND PRCNT &kp DQT   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp PLUS  &kp MINUS     &ht CARET UNDER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    ESC   │    TAB   │   {      │  }       │   /      │   │    *     │ (        │ )        │    ;     │  ENTER   │
             &kp ESC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH       &kp STAR    &kp LPAR   &kp RPAR  &kp SEMI   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ SHIFT    │  &       │  |       │    <     │    ` ~   │   │ @        │    >     │  =       │    :     │   ^   _  │
-           &kp LSHFT   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT     &kp GT   &kp EQUAL   &kp COLON  &ht CARET UNDER
+        //│ SHIFT    │  &       │  |       │    <     │    ` ~   │   │ @        │    >     │  =       │    :     │    ALT   │
+           &kp LSHFT   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT     &kp GT   &kp EQUAL   &kp COLON  &kp LALT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &trans   &mo NUMBERS      &none     &kp LALT   
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
