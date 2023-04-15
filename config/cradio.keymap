@@ -66,7 +66,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ ,  <     │ .  >     │ ? !      │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &kp COMMA   &kp DOT    &qmarkexcl
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                         &ht LCTRL BSPC &skq LSHFT   &mo SYMBOLS &kp SPACE
+                                         &ht LCTRL BSPC &mo SYMBOLS   &mo SYMBOLS &ht LSHFT SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -74,16 +74,16 @@
         symbols {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│     %    │  "       │  '       │  [       │    \     │   │ $        │ ]        │ +        │    -     │   ^   _  │
-       &ht POUND PRCNT &kp DQT   &kp APOS    &kp LBKT   &kp BSLH      &kp DLLR   &kp RBKT  &kp PLUS  &kp MINUS     &ht CARET UNDER
+        //│   ESC    │   '      │  "       │  [       │    \  %  │   │ #  $     │ ]        │ +        │    -     │   ^   _  │
+           &kp ESC   &kp APOS  &kp DQT     &kp LBKT   &ht BSLH PRCNT  &ht HASH DLLR &kp RBKT  &kp PLUS  &kp MINUS     &ht CARET UNDER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    ESC   │    TAB   │   {      │  }       │   /      │   │    *     │ (        │ )        │    ;     │  ENTER   │
-            &kp ESC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH       &kp STAR    &kp LPAR   &kp RPAR  &kp SEMI   &kp ENTER
+        //│    BSPC  │    TAB   │   {      │  }       │   /      │   │    =     │ (        │ )        │    ;     │  ENTER   │
+            &kp BSPC   &kp TAB       &kp LBRC  &kp RBRC  &kp FSLH     &kp EQUAL      &kp LPAR   &kp RPAR  &kp SEMI   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ SHIFT    │  &       │  |       │    <     │    ` ~   │   │ @        │    >     │  =       │    :     │    ALT   │
-           &kp LSHFT   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT     &kp GT   &kp EQUAL   &kp COLON  &kp LALT
+        //│ SHIFT    │  &       │  |       │    <     │    ` ~   │   │ @        │    >     │   *      │    :     │    ALT   │
+           &kp LSHFT   &kp AMPS   &kp PIPE   &kp LT    &ht GRAVE TILDE  &kp AT      &kp GT   &kp STAR   &kp COLON  &kp LALT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &trans   &mo NUMBERS      &none     &kp LALT   
+                                              &trans   &mo NUMBERS     &mo NUMBERS  &trans   
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
