@@ -66,7 +66,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ ,  <     │ .  >     │ ? !      │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &kp COMMA   &kp DOT    &qmarkexcl
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LSHFT  &kp BSPC       &kp SPACE  &mo SYMBOLS   
+                                              &kp BSPC &kp LSHFT      &mo SYMBOLS  &kp SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -75,10 +75,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│   ESC    │          │          │          │          │   │ #  $     │ [ ]      │ +  -     │  ^   _   │   DEL    │
-           &kp ESC     &kp N1       &kp N2     &kp N3      &none        &ht HASH DLLR &ht RBKT LBKT &ht PLUS MINUS &ht CARET UNDER &kp DEL
+           &kp ESC     &kp N1       &kp N2     &kp N3      &kp UARW        &ht HASH DLLR &ht RBKT LBKT &ht PLUS MINUS &ht CARET UNDER &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    TAB   │          │          │          │          │   │   & |    │ { }      │   = *    │    ; :   │  ENTER   │
-            &kp TAB   &kp N4      &kp N5      &kp N6       &none     &ht PIPE AMPS &ht RBRC LBRC &ht STAR EQUAL   &ht COLON SEMI &kp ENTER
+            &kp TAB   &kp N4      &kp N5      &kp N6       &kp DARW     &ht PIPE AMPS &ht RBRC LBRC &ht STAR EQUAL   &ht COLON SEMI &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CTRL     │          │          │          │          │   │ @ %      │    / \   │    ` ~   │   WIN    │    ALT   │
            &kp LCTRL   &kp N7      &kp N8       &kp N9     &kp N0  &ht PRCNT AT  &ht BSLH FSLH    &ht GRAVE TILDE  &kp LGUI &kp LALT
