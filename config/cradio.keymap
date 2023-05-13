@@ -75,7 +75,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│   ESC    │          │          │          │          │   │ #  $     │ [ ]      │ +  -     │  ^   _   │   DEL    │
-           &kp ESC     &kp N1       &kp N2     &kp N3      &none        &ht HASH DLLR &ht RBKT LBKT &ht PLUS MINUS &ht CARET UNDER %kp DEL
+           &kp ESC     &kp N1       &kp N2     &kp N3      &none        &ht HASH DLLR &ht RBKT LBKT &ht PLUS MINUS &ht CARET UNDER &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    TAB   │          │          │          │          │   │   & |    │ { }      │   = *    │    ; :   │  ENTER   │
             &kp TAB   &kp N4      &kp N5      &kp N6       &none     &ht PIPE AMPS &ht RBRC LBRC &ht STAR EQUAL   &ht COLON SEMI &kp ENTER
