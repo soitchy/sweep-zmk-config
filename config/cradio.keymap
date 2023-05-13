@@ -66,7 +66,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ ,  <     │ .  >     │ ? !      │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H     &kp COMMA   &kp DOT    &qmarkexcl
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                &LSFHT  &kp BSPC       &kp SPACE  &mo SYMBOLS   
+                                             &kp LSFHT  &kp BSPC       &kp SPACE  &mo SYMBOLS   
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
